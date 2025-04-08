@@ -1,0 +1,194 @@
+
+**** 04/07/25 17:49:40 *** PSpice 24.1.0 (26 February 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PAGE1"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\week05-pspicefiles\schematic1\p
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "PAGE1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\mjk\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 50000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source WEEK05
+V_V3         N15798 0  
++PULSE 0 5 25u 10n 10n 5u 10u
+X_U2         0 N15139 V+ V- N15149 LM741
+C_C2         N15798 N15139  1n  TC=0,0 
+R_R1         N15139 N15149  1k TC=0,0 
+C_C3         N16193 N16018  1n  TC=0,0 
+R_R2         N16232 N16193  1k TC=0,0 
+V_V4         N16232 0  
++PULSE 0 5 0 10n 10n 5u 10u
+X_U3         0 N16193 V+ V- N16018 LM741
+
+**** RESUMING PAGE1.cir ****
+.END
+
+**** 04/07/25 17:49:40 *** PSpice 24.1.0 (26 February 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PAGE1"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\week05-pspicefiles\schematic1\p
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.x_lm741.dx X_U2.x_lm741.dy X_U3.x_lm741.dx X_U3.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 04/07/25 17:49:40 *** PSpice 24.1.0 (26 February 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PAGE1"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\week05-pspicefiles\schematic1\p
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.x_lm741.qx X_U3.x_lm741.qx 
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 04/07/25 17:49:40 *** PSpice 24.1.0 (26 February 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PAGE1"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\week05-pspicefiles\schematic1\p
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)    1.4744  (   V-)    -.3176  (N15139) 155.0E-06 (N15149) 234.7E-06     
+
+(N15798)    0.0000 (N16018)    1.1565 (N16193)-79.44E-06 (N16232)    0.0000     
+
+(X_U2.x_lm741.6)     .0022            (X_U2.x_lm741.7)    -.0111                
+
+(X_U2.x_lm741.8)    -.0111            (X_U2.x_lm741.9)    0.0000                
+
+(X_U3.x_lm741.6)    -.0022            (X_U3.x_lm741.7)    1.1679                
+
+(X_U3.x_lm741.8)    1.1679            (X_U3.x_lm741.9)    0.0000                
+
+(X_U2.x_lm741.10)    -.6075           (X_U2.x_lm741.11)    1.4348               
+
+(X_U2.x_lm741.12)    1.4349           (X_U2.x_lm741.13)    -.5936               
+
+(X_U2.x_lm741.14)    -.5937           (X_U2.x_lm741.53)     .4744               
+
+(X_U2.x_lm741.54)     .6824           (X_U2.x_lm741.90)    -.2276               
+
+(X_U2.x_lm741.91)   40.0000           (X_U2.x_lm741.92)  -40.0000               
+
+(X_U2.x_lm741.99)     .5784           (X_U3.x_lm741.10)    -.6076               
+
+(X_U3.x_lm741.11)    1.4349           (X_U3.x_lm741.12)    1.4348               
+
+(X_U3.x_lm741.13)    -.5938           (X_U3.x_lm741.14)    -.5937               
+
+(X_U3.x_lm741.53)     .4744           (X_U3.x_lm741.54)     .6824               
+
+(X_U3.x_lm741.90)     .2272           (X_U3.x_lm741.91)   40.0000               
+
+(X_U3.x_lm741.92)  -40.0000           (X_U3.x_lm741.99)     .5784           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3         0.000E+00
+    V_V4        -7.944E-08
+    X_U2.x_lm741.vb   2.204E-08
+    X_U2.x_lm741.vc   4.750E-13
+    X_U2.x_lm741.ve  -2.277E-04
+    X_U2.x_lm741.vlim  -2.276E-04
+    X_U2.x_lm741.vlp  -4.023E-11
+    X_U2.x_lm741.vln  -3.978E-11
+    X_U3.x_lm741.vb  -2.199E-08
+    X_U3.x_lm741.vc  -2.272E-04
+    X_U3.x_lm741.ve   3.815E-13
+    X_U3.x_lm741.vlim   2.272E-04
+    X_U3.x_lm741.vlp  -3.977E-11
+    X_U3.x_lm741.vln  -4.023E-11
+
+    TOTAL POWER DISSIPATION   4.55E-04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/07/25 17:49:40 *** PSpice 24.1.0 (26 February 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PAGE1"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\week05-pspicefiles\schematic1\p
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .11
+

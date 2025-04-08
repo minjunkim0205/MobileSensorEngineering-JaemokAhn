@@ -1,0 +1,190 @@
+
+**** 04/03/25 11:21:26 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PAGE1"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\Week05-PSpiceFiles\SCHEMATIC1\P
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "PAGE1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\mjk\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source WEEK05
+V_V3         N15798 GND  
++PULSE 0 5 0 10n 10n 5u 10u
+X_U2         N15139 GND V+ V- N15149 LM741
+C_C2         N15798 N15139  1n  TC=0,0 
+R_R1         N15139 N15149  1k TC=0,0 
+C_C3         N16142 N16018  1n  TC=0,0 
+R_R2         N16232 N16142  1k TC=0,0 
+V_V4         N16232 GND  
++PULSE 0 5 0 10n 10n 5u 10u
+X_U3         N16142 GND V+ V- N16018 LM741
+
+**** RESUMING PAGE1.cir ****
+.END
+
+**** 04/03/25 11:21:26 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PAGE1"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\Week05-PSpiceFiles\SCHEMATIC1\P
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.x_lm741.dx X_U2.x_lm741.dy X_U3.x_lm741.dx X_U3.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 04/03/25 11:21:26 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PAGE1"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\Week05-PSpiceFiles\SCHEMATIC1\P
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.x_lm741.qx X_U3.x_lm741.qx 
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+Starting pseudo-transient algorithm.
+
+INFO(ORPSIM-16594): To improve Pseudotransient Convergence and Performance, set following options to relax stabilization criteria for capacitor currents and inductor voltages: PTRANABSTOL=1e-5, PTRANVNTOL=1e-4
+
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+) 1.657E+06  (   V-) 1.657E+06  (  GND) 1.657E+06  (N15139) 1.657E+06     
+
+(N15149) 1.657E+06 (N15798) 1.657E+06 (N16018) 1.657E+06 (N16142) 1.657E+06     
+
+(N16232) 1.657E+06 (X_U2.x_lm741.6)   -1.3909                                   
+
+(X_U2.x_lm741.7) 1.657E+06            (X_U2.x_lm741.8) 1.657E+06                
+
+(X_U2.x_lm741.9)    0.0000            (X_U3.x_lm741.6)    1.2818                
+
+(X_U3.x_lm741.7) 1.657E+06            (X_U3.x_lm741.8) 1.657E+06                
+
+(X_U3.x_lm741.9)    0.0000            (X_U2.x_lm741.10) 1.657E+06               
+
+(X_U2.x_lm741.11) 1.657E+06           (X_U2.x_lm741.12) 1.657E+06               
+
+(X_U2.x_lm741.13) 1.657E+06           (X_U2.x_lm741.14) 1.657E+06               
+
+(X_U2.x_lm741.53) 1.657E+06           (X_U2.x_lm741.54) 1.657E+06               
+
+(X_U2.x_lm741.90)   40.6030           (X_U2.x_lm741.91)   40.0000               
+
+(X_U2.x_lm741.92)  -40.0000           (X_U2.x_lm741.99) 1.657E+06               
+
+(X_U3.x_lm741.10) 1.657E+06           (X_U3.x_lm741.11) 1.657E+06               
+
+(X_U3.x_lm741.12) 1.657E+06           (X_U3.x_lm741.13) 1.657E+06               
+
+(X_U3.x_lm741.14) 1.657E+06           (X_U3.x_lm741.53) 1.657E+06               
+
+(X_U3.x_lm741.54) 1.657E+06           (X_U3.x_lm741.90)  -40.6000               
+
+(X_U3.x_lm741.91)   40.0000           (X_U3.x_lm741.92)  -40.0000               
+
+(X_U3.x_lm741.99) 1.657E+06           
+
+
+  These voltages failed to converge:
+
+    V(X_U2.x_lm741.6)         =     40.41V  \    -1.391V
+    V(X_U2.x_lm741.90)        =     39.52V  \     40.60V
+    V(X_U3.x_lm741.6)         =    -35.84V  \     1.282V
+    V(X_U3.x_lm741.90)        =    -39.52V  \    -40.60V
+
+  These supply currents failed to converge:
+
+    I(X_U2.x_lm741.egnd)      =   -39.94mA  \   -40.60mA
+    I(X_U3.x_lm741.egnd)      =    39.87mA  \    40.57mA
+    I(V_V3)                   =    39.52mA  \    1.907uA
+    I(V_V4)                   =   -39.51mA  \         0A
+    I(X_U2.x_lm741.vb)        =   404.09uA  \   -13.91uA
+    I(X_U2.x_lm741.vc)        =  -439.44pA  \   -40.61mA
+    I(X_U2.x_lm741.ve)        =  -226.54nA  \    -9.68uA
+    I(X_U2.x_lm741.vlim)      =    39.52mA  \    40.60mA
+    I(X_U2.x_lm741.vlp)       =  -428.96uA  \    10.51uA
+    I(X_U2.x_lm741.vln)       =   -79.52pA  \   -80.61pA
+    I(X_U3.x_lm741.vb)        =  -358.38uA  \    12.82uA
+    I(X_U3.x_lm741.vc)        =   224.63pA  \    9.069uA
+    I(X_U3.x_lm741.ve)        =    71.49nA  \   -40.59mA
+    I(X_U3.x_lm741.vlim)      =   -39.52mA  \   -40.60mA
+    I(X_U3.x_lm741.vln)       =  -380.48uA  \    9.350uA
+    I(X_U2.x_lm741.hlim)      =   428.96uA  \   -10.51uA
+    I(X_U3.x_lm741.hlim)      =  -380.48uA  \    9.350uA
+
+  These devices failed to converge:
+    X_U2.x_lm741.dc X_U2.x_lm741.dlp X_U2.x_lm741.dp X_U3.x_lm741.de 
+    X_U3.x_lm741.dln X_U3.x_lm741.dp X_U2.x_lm741.fb X_U3.x_lm741.fb 
+    X_U2.x_lm741.q2 X_U3.x_lm741.q1 X_U3.x_lm741.q2 
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+**** Interrupt ****

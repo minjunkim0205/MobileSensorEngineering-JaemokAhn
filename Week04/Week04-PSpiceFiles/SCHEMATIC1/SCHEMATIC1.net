@@ -1,0 +1,8 @@
+* source WEEK04
+X_U1         N14711 N14421 N14467 N14498 N14510 LM741
+V_V1         N14498 0 -10Vdc
+V_V2         N14467 0 10Vdc
+R_R1         N14510 N14421  100k TC=0,0 
+R_R2         N14421 0  1k TC=0,0 
+V_V3         N14711 0  
++PULSE 0 1 0 10n 10n 200u 400u

@@ -1,0 +1,134 @@
+
+**** 03/20/25 11:36:57 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week03\week03-pspicefiles\schematic1\bi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\mjk\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source WEEK03
+V_V1         N14424 0  
++PULSE 0V 10V 0 1n 1n 3m 1m
+R_R1         N14424 N14543  220 TC=0,0 
+C_C1         0 N14547  4.7u  TC=0,0 
+L_L1         N14543 N14547  33m  TC=0,0 
+I_I1         0 N14848 DC 0Adc  
+V_V2         N14877 0 0Vdc
+Q_Q1         N14877 N14848 0 QbreakN 
+
+**** RESUMING bias.cir ****
+.END
+
+**** 03/20/25 11:36:57 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week03\week03-pspicefiles\schematic1\bi
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QbreakN         
+               NPN             
+       LEVEL    1            
+          IS  100.000000E-18 
+          BF  100            
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_V1.
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_V1.
+
+**** 03/20/25 11:36:57 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week03\week03-pspicefiles\schematic1\bi
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14424)    0.0000 (N14543)    0.0000 (N14547)    0.0000 (N14848) 6.431E-15     
+
+(N14877)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -6.368E-27
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/20/25 11:36:57 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week03\week03-pspicefiles\schematic1\bi
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

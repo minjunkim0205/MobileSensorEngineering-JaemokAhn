@@ -1,0 +1,9 @@
+* source WEEK03
+V_V1         N14424 0  
++PULSE 0V 12V 0 1n 1n 3m 1m
+R_R1         N14424 N14543  220 TC=0,0 
+C_C1         0 N14547  4.7u  TC=0,0 
+L_L1         N14543 N14547  33m  TC=0,0 
+I_I1         0 N14848 DC 3Adc  
+V_V2         N14877 0 5Vdc
+Q_Q1         N14877 N14848 0 QbreakN 

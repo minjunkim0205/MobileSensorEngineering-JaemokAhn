@@ -1,0 +1,11 @@
+* source WEEK05
+V_V3         N15798 0  
++PULSE 0 5 25u 10n 10n 5u 10u
+X_U2         0 N15139 V+ V- N15149 LM741
+C_C2         N15798 N15139  1n  TC=0,0 
+R_R1         N15139 N15149  1k TC=0,0 
+C_C3         N16193 N16018  1n  TC=0,0 
+R_R2         N16232 N16193  1k TC=0,0 
+V_V4         N16232 0  
++PULSE 0 5 0 10n 10n 5u 10u
+X_U3         0 N16193 V+ V- N16018 LM741

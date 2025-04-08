@@ -1,0 +1,272 @@
+
+**** 04/03/25 11:18:37 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\week05-pspicefiles\schematic1\bi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\mjk\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source WEEK05
+X_U1         N14736 GND V+ V- N14767 LM741
+C_C1         N14736 N14767  1n  TC=0,0 
+V_V2         N14736 GND  
++PULSE 0 5 0 10n 10n 5u 10u
+V_V3         N15798 GND  
++PULSE 0 5 0 10n 10n 5u 10u
+X_U2         N15139 GND V+ V- N15149 LM741
+C_C2         N15798 N15139  1n  TC=0,0 
+R_R1         N15139 N15149  1k TC=0,0 
+
+**** RESUMING bias.cir ****
+.END
+
+**** 04/03/25 11:18:37 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\week05-pspicefiles\schematic1\bi
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x_lm741.dx X_U1.x_lm741.dy X_U2.x_lm741.dx X_U2.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 04/03/25 11:18:37 **** PSpice 24.1.0 (23 January 2025) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users Files\mjk\Coding\MobileSensorEngineering-JaemokAhn\Week05\week05-pspicefiles\schematic1\bi
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x_lm741.qx X_U2.x_lm741.qx 
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+Starting pseudo-transient algorithm.
+
+INFO(ORPSIM-16594): To improve Pseudotransient Convergence and Performance, set following options to relax stabilization criteria for capacitor currents and inductor voltages: PTRANABSTOL=1e-5, PTRANVNTOL=1e-4
+
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
+
+ERROR -- Convergence problem in bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+) 1.665E+06  (   V-) 1.665E+06  (  GND) 1.665E+06  (N14736) 1.665E+06     
+
+(N14767) 1.665E+06 (N15139) 1.665E+06 (N15149) 1.665E+06 (N15798) 1.665E+06     
+
+(X_U1.x_lm741.6)    2.2963            (X_U1.x_lm741.7) 1.665E+06                
+
+(X_U1.x_lm741.8) 1.665E+06            (X_U1.x_lm741.9)    0.0000                
+
+(X_U2.x_lm741.6)    -.3965            (X_U2.x_lm741.7) 1.665E+06                
+
+(X_U2.x_lm741.8) 1.665E+06            (X_U2.x_lm741.9)    0.0000                
+
+(X_U1.x_lm741.10) 1.665E+06           (X_U1.x_lm741.11) 1.665E+06               
+
+(X_U1.x_lm741.12) 1.665E+06           (X_U1.x_lm741.13) 1.665E+06               
+
+(X_U1.x_lm741.14) 1.665E+06           (X_U1.x_lm741.53) 1.665E+06               
+
+(X_U1.x_lm741.54) 1.665E+06           (X_U1.x_lm741.90)  -40.6190               
+
+(X_U1.x_lm741.91)   40.0000           (X_U1.x_lm741.92)  -40.0000               
+
+(X_U1.x_lm741.99) 1.665E+06           (X_U2.x_lm741.10) 1.665E+06               
+
+(X_U2.x_lm741.11) 1.665E+06           (X_U2.x_lm741.12) 1.665E+06               
+
+(X_U2.x_lm741.13) 1.665E+06           (X_U2.x_lm741.14) 1.665E+06               
+
+(X_U2.x_lm741.53) 1.665E+06           (X_U2.x_lm741.54) 1.665E+06               
+
+(X_U2.x_lm741.90)   40.1740           (X_U2.x_lm741.91)   40.0000               
+
+(X_U2.x_lm741.92)  -40.0000           (X_U2.x_lm741.99) 1.665E+06           
+
+
+  These voltages failed to converge:
+
+    V(X_U1.x_lm741.11)        =    1.672MV  \    1.666MV
+    V(X_U1.x_lm741.12)        =    1.672MV  \    1.666MV
+    V(X_U1.x_lm741.6)         =    193.54V  \     2.296V
+    V(X_U1.x_lm741.53)        =    1.672MV  \    1.666MV
+    V(X_U1.x_lm741.54)        =    1.672MV  \    1.665MV
+    V(X_U1.x_lm741.90)        =    -43.22V  \    -40.62V
+    V(V-)                     =    1.672MV  \    1.665MV
+    V(V+)                     =    1.672MV  \    1.666MV
+    V(X_U1.x_lm741.99)        =    1.672MV  \    1.665MV
+    V(X_U2.x_lm741.11)        =    1.672MV  \    1.666MV
+    V(X_U2.x_lm741.12)        =    1.672MV  \    1.666MV
+    V(X_U2.x_lm741.6)         =   576.22mV  \  -396.55mV
+    V(X_U2.x_lm741.53)        =    1.672MV  \    1.666MV
+    V(X_U2.x_lm741.54)        =    1.672MV  \    1.665MV
+    V(X_U2.x_lm741.90)        =   -179.42V  \     40.17V
+    V(X_U2.x_lm741.99)        =    1.672MV  \    1.665MV
+
+  These supply currents failed to converge:
+
+    I(X_U1.x_lm741.egnd)      =    41.60mA  \    40.59mA
+    I(X_U2.x_lm741.egnd)      =   175.98mA  \   -40.18mA
+    I(V_V2)                   =   125.00mA  \  -488.28uA
+    I(V_V3)                   =  -125.00mA  \         0A
+    I(X_U1.x_lm741.vb)        =    1.935mA  \    22.96uA
+    I(X_U1.x_lm741.vc)        =    6.269nA  \  -213.65uA
+    I(X_U1.x_lm741.ve)        =    60.25nA  \   -40.39mA
+    I(X_U1.x_lm741.vlim)      =   -43.22mA  \   -40.62mA
+    I(X_U1.x_lm741.vlp)       =   -83.22pA  \   -80.62pA
+    I(X_U1.x_lm741.vln)       =    2.047mA  \    20.16uA
+    I(X_U2.x_lm741.vb)        =    5.762uA  \   -3.966uA
+    I(X_U2.x_lm741.vc)        =    12.02nA  \   -40.39mA
+    I(X_U2.x_lm741.ve)        =  -234.87nA  \  -212.99uA
+    I(X_U2.x_lm741.vlim)      =  -179.42mA  \    40.17mA
+    I(X_U2.x_lm741.vlp)       =   -5.886nA  \   840.73fA
+    I(X_U2.x_lm741.vln)       =   139.41pA  \   -80.18pA
+    I(X_U1.x_lm741.hlim)      =    2.047mA  \    20.16uA
+    I(X_U2.x_lm741.hlim)      =    6.026nA  \   -81.02pA
+
+  These devices failed to converge:
+    X_U1.x_lm741.de X_U1.x_lm741.dln X_U1.x_lm741.dp X_U2.x_lm741.dc 
+    X_U2.x_lm741.de X_U2.x_lm741.dlp X_U2.x_lm741.dln X_U2.x_lm741.dp 
+    X_U1.x_lm741.fb X_U2.x_lm741.fb X_U1.x_lm741.q1 X_U1.x_lm741.q2 
+    X_U2.x_lm741.q2 
+
+WARNING -- Exceptionally high value of junction voltage (1.837e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.823e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.869e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.855e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.901e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.887e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.933e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.919e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.965e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.951e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.997e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (1.983e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.029e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.015e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.061e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.047e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.093e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.079e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.125e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.111e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.157e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.143e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.189e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U1.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+WARNING -- Exceptionally high value of junction voltage (2.175e+01) or low value of thermal voltage (2.586e-02) is seen in device X_U2.x_lm741.de that may lead to math overflow.
+To avoid this, try to lower the junction voltage by increasing RS (Series Resistance) or N (ideality factor) parameter values in the model.
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+**** Interrupt ****
